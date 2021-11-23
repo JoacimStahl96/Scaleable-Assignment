@@ -22,13 +22,13 @@ public class LegoController {
 
     @GetMapping("all")
     public Collection<LegoEntity> getAllLegos() {
-      //  legoService.loadFromFile();
+        System.out.println("tjenare");
         return legoService.getAllLegos();
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("{name}")
     public Collection<LegoEntity> getNamedLego(@PathVariable("name") String name){
-      //  legoService.loadFromFile();
+        System.out.println("tjenare specifik sökning");
         if (name.isBlank()){
             return null;
         }
